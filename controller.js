@@ -13,18 +13,18 @@ app.config(function($routeProvider){
 				}
 			}
 		},
-		 templateUrl: 'dashboard.html'
+		templateUrl: 'dashboard.html'
 	})
 	.otherwise({
 			redrectTo: '/'
 	});
 });	
 
-app.controller('loginCltr', [ '$scope', '$location',function($scope, $location, $rootScope){
+app.controller('loginCltr', function($scope, $location, $rootScope){
 
 	$scope.submit = function(){
 
-		if ($scope.username == 'admin' && $scope.password == 'lol') {
+		if ($scope.username == 'admin' && $scope.password == 'admin') {
 			 $rootScope.loggedIn = true;
 			 $location.path('/dashboard');
 		}
@@ -33,4 +33,4 @@ app.controller('loginCltr', [ '$scope', '$location',function($scope, $location, 
 			alert("Wrong Credentials , Try Again");
 		}
 	};
-}]);
+});
