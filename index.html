@@ -11,7 +11,15 @@
 </head>
 <body ng-app="mainApp">
 
- <div ng-controller="people"></div> 
+ <div ng-controller="people">
+ 		<ul>
+ 			<h2>Name and age of programmers in local area !</h2>
+
+ 			<li ng-repeat="person in persons">
+ 				{{ person.Name +  ' : '+ person.Age }}
+ 			</li>
+ 		</ul>
+ </div> 
 	
 </div>
 
